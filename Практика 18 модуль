@@ -1,0 +1,15 @@
+sum_tickets = 0
+tickets = int(input("Введитете количество билетов:\n "))
+for age in range (tickets):
+    age = int(input("Введите возвраст посетителя:\n "))
+    if age < 18:
+        sum_tickets += 0
+    elif 18 >= age <= 25:
+        sum_tickets += 990
+    elif age > 25:
+        sum_tickets += 1390
+
+if sum_tickets > 3:
+    discount = sum_tickets / 100 * 10
+    print("Сумма скидки: ", "%.2f" % discount, "руб" )
+    print("Сумма к оплате: ", "%.2f" % (sum_tickets - discount), "руб")
